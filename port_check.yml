@@ -1,0 +1,9 @@
+---
+ - name: Test Ansible Custom Module with python
+   hosts: localhost
+   
+   tasks: 
+     - name: "rechable"
+       can_reach: host=192.168.122.50 port=22 timeout=5
+       register: ping
+     - debug: var=ping
